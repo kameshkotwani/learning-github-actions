@@ -1,9 +1,8 @@
 def add(a, b):
-    return a + b
+    return a+b
 
 
-def substract(a, b):
-    return a-b
+def substract(a, b): return a-b
 
 
 result1 = add(4, 5)
