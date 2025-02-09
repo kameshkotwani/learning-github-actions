@@ -35,4 +35,19 @@ jobs:
       - name: run flake8 
         run: |
           flake8 linting_python.py
+  
+  unit-testing:
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: code-checkout
+        uses: actions/checkout@v3
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+        
+      - name: run  
+        run: |
+          python -m unittest discover
 
