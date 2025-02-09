@@ -14,4 +14,3 @@ if __name__ == "__main__":
     result2 = substract(4, 5)
 
     print(result1, result2)
-    
