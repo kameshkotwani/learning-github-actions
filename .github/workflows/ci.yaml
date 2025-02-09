@@ -37,7 +37,14 @@ jobs:
           flake8 linting_python.py
   
   unit-testing:
+    needs: linting
     runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: ['3.10','3.11']
+      fail-fast: true
     steps:
       - name: code-checkout
         uses: actions/checkout@v3
